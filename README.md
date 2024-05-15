@@ -67,7 +67,17 @@ The Weather App is a web application that provides the latest weather updates fo
 
 ## Screenshots
 
-![Weather App Screenshot](screenshot.png)
+### Dark Mode - Welcome Screen
+![Dark Mode - Welcome Screen](screenshots/Dark_Mode_Welcome_Screen.png)
+
+### Dark Mode - Weather Details
+![Dark Mode - Weather Details](screenshots/Dark_Mode_Weather_Details.png)
+
+### Light Mode - Welcome Screen
+![Light Mode - Welcome Screen](screenshots/Light_Mode_Welcome_Screen.png)
+
+### Light Mode - Weather Details
+![Light Mode - Weather Details](screenshots/Light_Mode_Weather_Details.png)
 
 ## Contributing
 
