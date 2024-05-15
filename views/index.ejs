@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<main>
+    <!-- Welcome Message -->
+    <h2 style="padding-bottom: 20px;">Welcome to <span style="color: hotpink;">The Weather App</span></h2>
+    <p class="lead" style="padding-bottom: 10px;">Get the latest weather updates for any city around the world. Simply <br>enter the city name below to get started.</p>
+    
+    <!-- Weather Form -->
+    <form action="/weather" method="post">
+        <div class="form-group">
+            <input type="text" name="city" class="form-control" placeholder="Enter city name" required>
+        </div>
+        <button type="submit" class=" mb-2">Get Weather</button>
+    </form>
+
+    <!-- Weather Details (conditionally rendered) -->
+    <% if (locals.weather) { %>
+        <div class="weather-card">
+            <h5>Weather in <%= weather.name %></h5>
+            <div class="weather-detail">
+                <span>Temperature:</span>
+                <span><%= weather.main.temp %> °C</span>
+            </div>
+            <div class="weather-detail">
+                <span>Weather:</span>
+                <span><%= weather.weather[0].description %></span>
+            </div>
+            <div class="weather-detail">
+                <span>Humidity:</span>
+                <span><%= weather.main.humidity %> %</span>
+            </div>
+            <div class="weather-detail">
+                <span>Wind Speed:</span>
+                <span><%= weather.wind.speed %> m/s</span>
+            </div>
+            <div class="weather-detail">
+                <span>Pressure:</span>
+                <span><%= weather.main.pressure %> hPa</span>
+            </div>
+            <div class="weather-detail">
+                <span>Min Temperature:</span>
+                <span><%= weather.main.temp_min %> °C</span>
+            </div>
+            <div class="weather-detail">
+                <span>Max Temperature:</span>
+                <span><%= weather.main.temp_max %> °C</span>
+            </div>
+        </div>
+    <% } %>
+</main>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,237 @@
+/* General Styles */
+body {
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    animation: fadeInUp 1s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Weather Card */
+.weather-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s;
+    margin: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.weather-card h5 {
+    margin-bottom: 15px;
+}
+
+.weather-card .weather-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* Input Textbox */
+input[type="text"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+/* Button */
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #e91e63;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    padding: 0px 10px;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 50%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -50%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Dark Mode */
+body {
+    background: #222;
+    color: white;
+}
+
+header {
+    background-color: #222;
+    color: hotpink;
+}
+
+.weather-card {
+    background: #333;
+    color: white;
+}
+
+.weather-card h5 {
+    color: #ff4081;
+}
+
+input[type="text"] {
+    background: #c7c7c7;
+    color: white;
+}
+
+button {
+    background: #ff4081;
+    color: white;
+}
+
+footer {
+    background-color: #222;
+    color: grey;
+}
+
+/* Light Mode */
+.light-mode {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode header {
+    background-color: #ffffff;
+    color: #222;
+}
+
+.light-mode .weather-card {
+    background: #f4f4f4;
+    color: #333;
+}
+
+.light-mode input[type="text"] {
+    background: #f0f0f0;
+    color: #222;
+}
+
+.light-mode button {
+    background: #ff4081;
+    color: white;
+}
+
+.light-mode footer {
+    background-color: #fff;
+    color: #222;
+}
+
+
